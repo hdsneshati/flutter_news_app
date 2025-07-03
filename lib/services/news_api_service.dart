@@ -9,13 +9,13 @@ class NewsApiService {
   final String apiToken;
 
   NewsApiService({required this.apiToken, Dio? dio})
-      : _dio = dio ?? Dio(BaseOptions(baseUrl: baseUrl));
+      : _dio = dio ?? Dio(BaseOptions(baseUrl: baseUrl));//گر Dio داده نشه، خودش یک Dio جدید می‌سازه و baseUrl رو براش تنظیم می‌کنه
 
-  Future<List<NewsArticle>> fetchTopNews({
+  Future<List<NewsArticle>> fetchTopNews({//ک لیست از اخبار رو به صورت Future برمی‌گردونه.
     String locale = 'us',
-    int limit = 10,
+    int limit = 10,//10 خبر دریافت میکنه
   }) async {
-    try {
+    try {//ارسال درخواست
       final response = await _dio.get(
         '/news/top',
         queryParameters: {
@@ -25,7 +25,7 @@ class NewsApiService {
         },
       );
 
-      if (response.statusCode == 200) {
+      if (response.statusCode == 200) {//کد200یعنی موفق
         final data = response.data;
         List<dynamic> articlesJson = data['data'];
         List<NewsArticle> articles =
