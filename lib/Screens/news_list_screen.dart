@@ -2,7 +2,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_news_app/Screens/news_details_screen.dart';
+//import 'package:flutter_news_app/Screens/news_details_screen.dart';
 import 'package:flutter_news_app/models/news_model.dart';
 import 'package:flutter_news_app/news_bloc/news_bloc.dart';
 import 'package:flutter_news_app/news_bloc/news_event.dart';
@@ -65,7 +65,7 @@ class NewsListScreen extends StatelessWidget {
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                     ),
-                    onTap: () {
+                   /* onTap: () {
                      Navigator.push(
                         context,
                         MaterialPageRoute(
@@ -73,7 +73,7 @@ class NewsListScreen extends StatelessWidget {
                        ),
                       );
 
-                    },
+                    },*/
                 );
                 
                 }

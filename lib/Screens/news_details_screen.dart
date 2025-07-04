@@ -1,11 +1,20 @@
-import 'package:cached_network_image/cached_network_image.dart';
+
+
+
+
+
+
+
+
+
+
+
+
+/*import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+
 import 'package:flutter_news_app/models/news_model.dart';
-import 'package:flutter_news_app/news_bloc/news_bloc.dart';
-import 'package:flutter_news_app/news_bloc/news_event.dart';
-import 'package:flutter_news_app/news_bloc/news_state.dart';
-//
+
 
 class NewsDetailsScreen extends StatelessWidget {
   final NewsArticle article; 
@@ -69,4 +78,4 @@ class NewsDetailsScreen extends StatelessWidget {
       ),
     );
   }
-}
+}*/
