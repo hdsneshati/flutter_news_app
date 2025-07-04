@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_news_app/models/news_model.dart';
-import '../models/news_model.dart';
+
 
 class NewsApiService {
   static const String baseUrl = "https://api.thenewsapi.com/v1";
