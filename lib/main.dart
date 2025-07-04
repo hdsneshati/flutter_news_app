@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:flutter_news_app/Screens/news_list_screen.dart';
+import 'package:flutter_news_app/news_bloc/news_bloc.dart';
+import 'package:flutter_news_app/services/news_api_service.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,11 +20,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
        
       ),
-      home: // BlocProvider(
-        //create: (context) => NewsBloc(NewsApiService()),
-       // child:
+      home:  BlocProvider(
+        create: (context) => NewsBloc(NewsApiService(apiToken: 'Do6HZKN8qMYDkWyghTUCLyMn5U9YPBgvjphJ4exN')),
+        child:
          const NewsListScreen(),
-     //),
+     ),
       );
   }
 }
